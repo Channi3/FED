@@ -36,15 +36,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  https://www.playstation.com/nl-nl/
+  https://www.soilboy.sg
 
   #### Screenshot(s) van de eerste pagina (small screen): 
-  Homepagina
-  <img src="readme-images/playstation-homepagina.png" width="375px" alt="Homepagina van de playstation website">
+  Workshops pagina
+  <img src="readme-images/Soilboy workshops pagina.png" width="375px" alt="Workshop pagina van de Soilboy website">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   Playstation store  
-  <img src="readme-images/playstation-store.png" width="375px" alt="Playstation store op de playstation website">
+  <img src="readme-images/Soilboy plant care pagina.png" width="375px" alt="Plant care pagina van de Soilboy website">
  
 </details>
 
