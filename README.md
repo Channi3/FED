@@ -43,7 +43,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <img src="readme-images/Soilboy workshops pagina.png" width="375px" alt="Workshop pagina van de Soilboy website">
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  Playstation store  
+  Plant care pagina   
   <img src="readme-images/Soilboy plant care pagina.png" width="375px" alt="Plant care pagina van de Soilboy website">
  
 </details>
