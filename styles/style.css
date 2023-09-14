@@ -27,5 +27,34 @@
 /* JOUW STYLING */
 /****************/
 
-/* jouw code */
+body{
+	background-color: #FEF9F1;
+}
+
+ul{
+	list-style-type: none;
+	display: flex;
+	width: 100%;
+	justify-content: start;
+}
+
+li{
+	margin: 1%; 
+}
+
+img{
+	width: 100%;
+}
+
+main {
+	display: grid;
+	grid-template-columns: 1fr, 1fr, 1fr ;
+	grid-gap: 1em;
+}
+
+nav img{
+	justify-content: center;
+	height: 3em;
+	width: 8em;
+}
 
