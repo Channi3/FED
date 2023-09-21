@@ -1,8 +1,12 @@
 /**************/
 /* CSS REMEDY */
 /**************/
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800;900&family=Expletus+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 *, *::after, *::before {
   box-sizing:border-box;  
+  margin: 0;
+  padding:0;
 }
 
 
@@ -27,34 +31,117 @@
 /* JOUW STYLING */
 /****************/
 
+
+
 body{
 	background-color: #FEF9F1;
+	font-family: 'Darker Grotesque', sans-serif;
 }
 
-ul{
-	list-style-type: none;
-	display: flex;
+section ul{
+	display: grid;
 	width: 100%;
 	justify-content: start;
+	grid-template-columns: 1fr 1fr;
+	gap: 1.7em;
+}
+
+nav ul{
+	list-style-type: none;
+    display: flex;
+    justify-content: center;
 }
 
 li{
-	margin: 1%; 
+	margin: 1%;
 }
 
 img{
 	width: 100%;
 }
 
-main {
-	display: grid;
-	grid-template-columns: 1fr, 1fr, 1fr ;
-	grid-gap: 1em;
+section li {
+
+	height: auto;
+	grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+	gap: 1em;
+	position: relative;
+	overflow: hidden;
+}
+
+
+
+nav{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
 
 nav img{
-	justify-content: center;
-	height: 3em;
-	width: 8em;
+    height: 2.7em;
+    width: 4.5em;
+    padding-top: 1em;
+
 }
+
+section{
+	margin: 2em;
+}
+
+section ul h2{
+	display: flex;
+    justify-content: center;
+    font-weight: 500;
+    line-height: 1;
+    text-align: center;
+}
+
+section ul p{
+	display: flex;
+    justify-content: center;
+    padding-top: 0.4em;
+}
+
+main section:nth-of-type(2){
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	visibility: hidden;
+}
+
+footer{
+	background-color: #262626;
+	color:white;
+}
+
+footer h2{
+    font-size: 2.2em;
+    font-weight: 300;
+	padding-top: 1em;
+	padding-bottom: 0.4em;
+}
+
+footer p{
+	font-size: 1.2em;
+	color:white;
+}
+
+footer p:nth-of-type(5){
+	padding-top:1em;
+	text-decoration: underline ;
+
+}
+
+footer section:nth-of-type(2){
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	text-decoration: underline;
+}
+
+h1{
+	text-align: center;
+	padding-top:1em;
+}
+
 

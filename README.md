@@ -56,7 +56,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na test in 2<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen:
+  Bij de validator kwamen er best veel errors naar voren. Dit komt door het voormatig gebruik van div's. Ook gebruikt de website geen headings en zie ik zelden een h1. Er zit geen media in de website en er zijn ook geen links die openen naar een nieuwe tab of pagina. Bij het veranderen naar reduced motion, zijn er een paar animaties die anders worden en langzamer gaan. 
 
 </details>
 
@@ -94,7 +94,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | Chanté         | Marelva            | Meike        | Jens             |
+  | Chanté         | Marelva            | Meike        |  Jens
   | ---            | ---                | ---          | ---              |
   | Het maken van  | en dit             | en ik dit    | en dan ik dat    |
   | een grid.      | dit als er tijd is | nog een punt | dit wil ik zeker |
