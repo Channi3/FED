@@ -94,19 +94,21 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | Chanté         | Marelva            | Meike        |  Jens
-  | ---            | ---                | ---          | ---              |
-  | Het maken van  | en dit             | en ik dit    | en dan ik dat    |
-  | een grid.      | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  Chanté: Waarom mijn grid niet werkt, terwijl het er wel goed in staat.
+
+  Marelva: 
+
+  Meike:
+
+  Jens: Hoe de achtergrond mooi kan verlopen in het geheel.
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
+  - Ik had de main aangeroepen, maar de main was nog niet in de HTML.
+  - De opdrachten van de les maken, waardoor je veel meer kan snappen en maken.
+  - ...
   - ...
 
 </details>
@@ -121,7 +123,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Nadat ik hulp had gevraagd ging het maken van een grid goed en kon ik de pagina goed aanpassen. Ik ben bijna klaar met de footer van de eerste pagina, maar hij zit niet aan de onderkant van de pagina. (neem ook screenshots op van delen van je website en code)
+
+  <img src="readme-images/Footer-fout.png" width="375px" alt="Footer van pagina 1 die niet het einde van de pagina bereikt.">
 
 
   ### Agenda voor meeting
