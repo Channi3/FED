@@ -32,13 +32,14 @@
 /****************/
 
 
-
+/* Body styling */
 body{
 	background-color: #FEF9F1;
 	font-family: 'Darker Grotesque', sans-serif;
 }
 
-section ul{
+/* Main section styling */
+main section ul{
 	display: grid;
 	width: 100%;
 	justify-content: start;
@@ -46,20 +47,24 @@ section ul{
 	gap: 1.7em;
 }
 
+/* Menu */
 nav ul{
 	list-style-type: none;
     display: flex;
     justify-content: center;
 }
 
+/* Op alle list items een margin */
 li{
 	margin: 1%;
 }
 
+/* Images */
 img{
 	width: 100%;
 }
 
+/* Geen puntjes bij de li ????? */ 
 section li {
 
 	height: auto;
@@ -78,10 +83,11 @@ nav{
 	flex-direction: column;
 }
 
-nav img{
+nav a img{
     height: 2.7em;
     width: 4.5em;
     padding-top: 1em;
+	margin-left: 2em;
 
 }
 
@@ -110,11 +116,14 @@ main section:nth-of-type(2){
 	visibility: hidden;
 }
 
+/* Footer styling */
 footer{
 	background-color: #262626;
 	color:white;
+	overflow: hidden;
 }
 
+/* H2 in de footer */
 footer h2{
     font-size: 2.2em;
     font-weight: 300;
@@ -122,23 +131,65 @@ footer h2{
 	padding-bottom: 0.4em;
 }
 
+/* P in de footer */
 footer p{
 	font-size: 1.2em;
 	color:white;
+	
 }
 
+/* 5de P in de footer  */
 footer p:nth-of-type(5){
 	padding-top:1em;
 	text-decoration: underline ;
 
 }
 
+/* Tweede section in de footer */
 footer section:nth-of-type(2){
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	text-decoration: underline;
 }
 
+/* Email adres form en button */
+footer article{
+	margin-left: 2em;
+    margin-top: 3em;
+    display: grid;
+    justify-items: start;
+}
+
+/* Email adres form */
+input{
+	margin-bottom: 1em;
+    padding: 1em;
+    width: 14em;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 1.2em;
+}
+
+/* Button in de footer */
+footer button{
+	font-family: 'Darker Grotesque', sans-serif;
+	font-size: 1.2em;
+	background-color: transparent;
+	color: white;
+    border-radius: 3em;
+    width: 8em;
+    padding: 1em;
+    border-color: white;
+	border-style: solid;
+}
+
+/* Button in de footer bij hover wit */
+footer button:hover{
+	cursor:pointer;
+	background-color: white;
+	color:black;
+}
+
+/* Verstopte H1 */
 h1{
 	text-align: center;
     z-index: 1;
@@ -146,4 +197,31 @@ h1{
     position: absolute;
 }
 
+/* Onderlijning van link weg */
 
+a{
+	text-decoration: none;
+}
+
+/* Spatie tussen de list items in de nav */
+nav ul a {
+	margin: 0.5em;
+}
+
+
+/* Hamburger menu icon button vormgeving weg */
+header button{
+	all:unset;
+}
+
+/* Logo en hamburger menu icon */
+header section{
+	display: flex;
+    justify-items: center;
+    flex-direction: row-reverse;
+}
+
+/* Geklikte links naar zwart WERKT NIET */ 
+a:visited{
+	color: black;
+}
