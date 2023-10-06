@@ -1,70 +1,310 @@
-/**************/
-/* CSS REMEDY */
-/**************/
+
+/* CSS */
+
 @import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800;900&family=Expletus+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-*, *::after, *::before {
-  box-sizing:border-box;  
-  margin: 0;
-  padding:0;
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 
 
+/* KLEUREN */
 
-
-
-/*********************/
-/* CUSTOM PROPERTIES */
-/*********************/
 :root {
-	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+	--achtergrondKleur: #FEF9F1;
+	--secundaireKleur: #262626;
+	--accentkleurWit: white;
+	--accentkleurZwart: black;
+	--focusKleur: red;
+}
+
+
+
+/* DARK MODE */
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--achtergrondKleur: black;
+		--secundaireKleur: #262626;
+		--accentkleurWit: white;
+		--accentkleurZwart: white;
+	}
+
+	body {
+		background-color: var(--achtergrondKleur)
+	}
+
+	nav {
+		filter: invert(1);
+	}
+
+	h2 {
+		color: var(--accentkleurWit);
+	}
+
+	h3 {
+		color: var(--accentkleurWit);
+	}
+
+	p {
+		color: var(--accentkleurWit);
+	}
 }
 
 
 
 
 
-/****************/
-/* JOUW STYLING */
-/****************/
+/* BODY */
 
 
-/* Body styling */
-body{
-	background-color: #FEF9F1;
+
+body {
+	background-color: var(--achtergrondKleur);
 	font-family: 'Darker Grotesque', sans-serif;
 }
 
-/* Main section styling */
-main section ul{
-	display: grid;
+
+
+/* WIDTH OP ALLE IMAGES */
+
+img {
 	width: 100%;
-	justify-content: start;
-	grid-template-columns: 1fr 1fr;
-	gap: 1.7em;
 }
 
-/* Menu */
-nav ul{
-	list-style-type: none;
-    display: flex;
-    justify-content: center;
+
+
+/* RUIMTE BIJ DE SECTIONS */
+
+section {
+	margin: 2em;
 }
 
-/* Op alle list items een margin */
-li{
+
+
+/* ONDERLIJNING VAN LINKJES WEG */
+
+a {
+	text-decoration: none;
+}
+
+
+
+/* FOCUS */
+
+:focus-visible {
+	outline: dotted var(--focusKleur);
+	outline-width: 0.3em;
+}
+
+
+
+
+
+/* HEADER */
+
+
+
+/* MARGIN OP ALLE LIST ITEMS */
+
+li {
 	margin: 1%;
 }
 
-/* Images */
-img{
-	width: 100%;
+
+
+/* LOGO */
+
+nav a img {
+	height: 3.7em;
+	width: 6.5em;
+	padding-top: 1em;
 }
 
-/* Geen puntjes bij de li ????? */ 
+
+
+/* LOGO & HAMBURGER MENU SAMEN */
+
+header section {
+	display: grid;
+	grid-template-columns: 1fr min-content 1fr;
+	width: 100%;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+
+
+/* NAVIGATIE BREDE VORM */
+
+header nav {
+	display: flex;
+	position: relative;
+	z-index: 2;
+}
+
+
+
+/* NAVIGATIE LINKJES WIT */
+
+header ul a {
+	color: var(--accentkleurWit);
+}
+
+
+
+/* UITKLAP MENU */
+
+header ul {
+	list-style-type: none;
+	display: none;
+	position: absolute;
+	top: 100%;
+	background-color: var(--secundaireKleur);
+	width: 100%;
+	text-align: left;
+	padding-left: 2em;
+}
+
+
+
+/* MENU ICON IMAGE */
+
+header button img {
+	width: 4em;
+	padding-left: 1em;
+	padding-top: 0.4em;
+}
+
+
+
+/* LOGO OP HOVER DRAAIEN */
+
+header nav section a:hover {
+	transform: rotate(360deg);
+}
+
+
+
+/* LOGO TRANSITION DURATIE */
+
+header nav section a {
+	transition-duration: 5s;
+}
+
+
+
+/* HAMBURGER MENU BUTTON */
+
+header nav section button {
+	width: 5em;
+}
+
+
+
+/* GEOPEND MENU */
+
+header ul.open {
+	display: block;
+	width: 50%;
+	border-radius: 1em;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	margin-left: 2em;
+}
+
+
+
+/* MARGIN TUSSEN LIST ITEMS */
+header li {
+	margin: 1em;
+}
+
+
+
+/* HOVER OP DE NAVIGATIE LINKJES */
+
+header ul li a:hover {
+	background-color: var(--achtergrondKleur);
+	transition: .3s;
+	padding: 0.5em;
+	border-radius: 0.5em;
+	color: var(--accentkleurZwart);
+}
+
+
+
+/* NAVIGATIE LINKJES */
+
+nav ul a {
+	margin: 0.5em;
+	font-size: 1.4em;
+}
+
+
+
+/* VORMGEVING HAMBURGER MENU BUTTON WEG */
+
+header button {
+	all: unset;
+}
+
+
+
+/* GEKLIKTE LINKS NAAR WIT IN HEADER */
+
+header a:visited {
+	color: var(--accentkleurWit);
+}
+
+
+
+
+
+/* MAIN */
+
+
+
+/* FADE IN ANIMATIE  */
+
+@keyframes slideInFromLeft {
+	0% {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+
+/* FADE IN ANIMATIE OP MAIN */
+main {
+	animation: 1.5s ease-out 0s 1 slideInFromLeft;
+}
+
+
+
+/* WORKSHOPS STYLING */
+
+main section ul {
+	display: grid;
+	width: 100%;
+	justify-content: start;
+	grid-template-columns: repeat(auto-fit, minmax(8em, 1fr));
+	gap: 1.7em;
+}
+
+
+
+/* MARKERS WEG  */
+
 section li {
 
 	height: auto;
@@ -76,152 +316,465 @@ section li {
 
 
 
-nav{
+/* VERSTOPTE H1 */
+
+h1 {
+	text-align: center;
+	z-index: 1;
+	visibility: hidden;
+	position: absolute;
+}
+
+
+
+/* HOVER OP WORKSHOPS */
+
+main section li:hover {
+	transform: scale(1.1);
+	transition: .5s;
+}
+
+
+
+/* SMOOTH TERUG TRANSITIE VAN HOVER AF*/
+
+main section li {
+	transition: .5s;
+}
+
+
+
+/* H2 TEKST WORKSHOPS */
+
+section ul h2 {
 	display: flex;
 	justify-content: center;
-	align-items: center;
-	flex-direction: column;
+	font-weight: 500;
+	line-height: 1;
+	text-align: center;
 }
 
-nav a img{
-    height: 2.7em;
-    width: 4.5em;
-    padding-top: 1em;
-	margin-left: 2em;
 
-}
 
-section{
-	margin: 2em;
-}
+/* P TEKST WORKSHOPS */
 
-section ul h2{
+section ul p {
 	display: flex;
-    justify-content: center;
-    font-weight: 500;
-    line-height: 1;
-    text-align: center;
+	justify-content: center;
+	padding-top: 0.4em;
 }
 
-section ul p{
-	display: flex;
-    justify-content: center;
-    padding-top: 0.4em;
-}
 
-main section:nth-of-type(2){
+
+/* VERBORGEN SECTION AAN ONDERKANT WORKSHOPS */
+
+main section:nth-of-type(2) {
 	display: flex;
 	justify-content: center;
 	text-align: center;
 	visibility: hidden;
 }
 
-/* Footer styling */
-footer{
-	background-color: #262626;
-	color:white;
+
+
+/* WANNEER HET SCHERM GROTER IS, KOMT NAVIGATIE */
+
+@media screen and (width>70em) {
+	header ul {
+		display: flex;
+		text-align: center;
+		margin-top: 1em;
+		width: 72%;
+		align-items: center;
+		margin-left: 13%;
+		border-radius: 1em;
+		padding-left: 0;
+		justify-content: center;
+	}
+
+	header nav section button {
+		visibility: hidden;
+	}
+
+	header nav {
+		height: 6em;
+	}
+
+	main article {
+		margin-top: 6em;
+	}
+
+	main section {
+		margin-top: 9em;
+	}
+}
+
+
+
+/* GEKLIKTE LINKS IN DE MAIN ZWART */
+
+main a:visited {
+	color: var(--accentkleurZwart);
+}
+
+
+
+/* SCROLL DOOR FOTO'S */
+
+figure {
+	white-space: nowrap;
+	overflow-x: auto;
+	margin-bottom: 4em;
+	margin-left: 1.5em;
+}
+
+
+
+/* SCROLL FOTO'S STYLING */
+
+figure img {
+	display: inline-block;
+	margin: 0px;
+	padding: 1.5px;
+	width: 60%;
+	margin-bottom: 1em;
+	height: 80%;
+	margin-top: 0.5em;
+}
+
+
+
+/* TEKST BLIJFT STAAN WANNEER SCROLL */
+figure h2 {
+	position: sticky;
+	left: 1%;
+}
+
+
+
+/* ALS SCHERM GROTER BREDER IS ANDERE STYLING */
+
+@media screen and (width>45em) {
+	figure {
+		white-space: nowrap;
+		overflow-x: auto;
+		margin-bottom: 4em;
+		margin-left: 2em;
+	}
+
+	figure img {
+		display: inline-block;
+		margin: 0px;
+		padding: 1.5px;
+		width: 32%;
+		margin-bottom: 1em;
+		height: 60%;
+		margin-top: 0.5em;
+	}
+
+	figure h2 {
+		position: sticky;
+		left: .5%;
+		font-size: x-large;
+	}
+}
+
+
+
+
+
+/* FOOTER */
+
+
+
+/* FOOTER STYLING */
+
+footer {
+	background-color: var(--secundaireKleur);
+	color: var(--accentkleurWit);
 	overflow: hidden;
 }
 
-/* H2 in de footer */
-footer h2{
-    font-size: 2.2em;
-    font-weight: 300;
+
+
+/* H2 IN DE FOOTER */
+
+footer h2 {
+	font-size: 2.2em;
+	font-weight: 300;
 	padding-top: 1em;
 	padding-bottom: 0.4em;
 }
 
-/* P in de footer */
-footer p{
+
+
+/* FOOTER EERSTE H2 */
+
+footer article h2 {
+	padding-bottom: 0.5em;
+}
+
+
+
+/* P IN DE FOOTER */
+
+footer p {
 	font-size: 1.2em;
-	color:white;
-	
+	color: var(--accentkleurWit);
 }
 
-/* 5de P in de footer  */
-footer p:nth-of-type(5){
-	padding-top:1em;
-	text-decoration: underline ;
 
-}
 
-/* Tweede section in de footer */
-footer section:nth-of-type(2){
-	display: grid;
-	grid-template-columns: 1fr 1fr;
+/* 5de P IN DE FOOTER  */
+
+footer p:nth-of-type(5) {
+	padding-top: 1em;
 	text-decoration: underline;
 }
 
-/* Email adres form en button */
-footer article{
+
+
+/* FOOTER TWEEDE SECTION FAQ'S & PRIVACY */
+
+footer section:nth-of-type(2) {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(10em, 0fr));
+}
+
+
+
+/* FORM & BUTTON POSITIE*/
+
+footer article {
 	margin-left: 2em;
-    margin-top: 3em;
-    display: grid;
-    justify-items: start;
+	margin-top: 3em;
+	display: grid;
+	justify-items: start;
 }
 
-/* Email adres form */
-input{
+
+
+/* FORM STYLING */
+
+input {
 	margin-bottom: 1em;
-    padding: 1em;
-    width: 14em;
-    font-family: 'Darker Grotesque', sans-serif;
-    font-size: 1.2em;
+	padding: 1em;
+	width: 14em;
+	font-family: 'Darker Grotesque', sans-serif;
+	font-size: 1.2em;
+	display: block;
 }
 
-/* Button in de footer */
-footer button{
+
+
+/* LABEL STYLING */
+
+label {
+	font-size: 1.4em;
+}
+
+
+
+/* BUTTON STYLING */
+
+footer button {
 	font-family: 'Darker Grotesque', sans-serif;
 	font-size: 1.2em;
 	background-color: transparent;
-	color: white;
-    border-radius: 3em;
-    width: 8em;
-    padding: 1em;
-    border-color: white;
+	color: var(--accentkleurWit);
+	border-radius: 3em;
+	width: 8em;
+	padding: 1em;
+	border-color: var(--accentkleurWit);
 	border-style: solid;
 }
 
-/* Button in de footer bij hover wit */
-footer button:hover{
-	cursor:pointer;
-	background-color: white;
-	color:black;
-}
 
-/* Verstopte H1 */
-h1{
-	text-align: center;
-    z-index: 1;
-    visibility: hidden;
-    position: absolute;
-}
 
-/* Onderlijning van link weg */
+/* HOVER WITTE BUTTON */
 
-a{
-	text-decoration: none;
-}
-
-/* Spatie tussen de list items in de nav */
-nav ul a {
-	margin: 0.5em;
+footer button:hover {
+	cursor: pointer;
+	background-color: var(--achtergrondKleur);
+	color: var(--accentkleurZwart);
 }
 
 
-/* Hamburger menu icon button vormgeving weg */
-header button{
-	all:unset;
+
+/* ONDERLIJNEN P LINKJES */
+footer section a p {
+	text-decoration: underline;
 }
 
-/* Logo en hamburger menu icon */
-header section{
+
+
+/* TWEEDE SECTION ONDERLIJNDE LINKJES FOCUS */
+
+footer section:nth-of-type(1):focus {
+	outline: dotted var(--focusKleur);
+	outline-width: 0.3em;
+}
+
+
+
+
+
+/* PLANTCARE PAGINA */
+
+
+
+/* MAIN */
+
+
+
+/* PADDING OP PLANTCARE */
+
+main article {
+	padding: 5vw;
+}
+
+
+
+/* ALS SCHERM BREDER IS ANDERE STYLING */
+
+@media screen and (width>45em) {
+	article {
+		display: flex;
+		gap: 1em;
+	}
+
+	article img {
+		max-width: 30em;
+	}
+}
+
+
+
+/* BREEDTE TEKST */
+
+main article {
+	width: 100vw;
+}
+
+
+
+/* LAAT DE TEKST PASSEN ONDER ELKAAR OP DE HELFT VAN SCHERM*/
+
+div {
+	flex-basis: 50%;
+}
+
+
+
+/* IMAGE ZOOM */
+
+@keyframes zoomIn {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(0.9, 0.9);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+
+
+/* LAAT IMAGE PASSEN OP DE HELFT VAN SCHERM */
+
+main article img {
+	flex-basis: 50%;
+}
+
+
+
+/* ZOOM ANIMATIE OP HOVER */
+
+main article img:hover {
+	animation-name: zoomIn;
+	animation-duration: 7s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+
+
+/* RUIMTE BIJ DE TEKST */
+
+main article div {
+	max-width: 32em;
+	margin-top: 1em;
+	font-size: large;
+}
+
+
+
+/* KLEIN BEETJE SPATIE TUSSEN ZINNEN */
+
+main article h2 {
+	line-height: 1em;
+}
+
+
+
+/* P LINKJE ONDERLIJNEN */
+
+main article div a p {
+	text-decoration: underline;
+}
+
+
+
+/* RUIMTE AAN DE ONDERKANT VAN PLANTCARE */
+
+main article:nth-of-type(4) {
+	margin-bottom: 5em;
+}
+
+
+
+/* VIDEO STYLING */
+
+video {
 	display: flex;
-    justify-items: center;
-    flex-direction: row-reverse;
+	margin: 0.8em;
+	width: 90%;
+	max-height: 30em;
+	margin-left: 5%;
+	margin-bottom: 13%;
 }
 
-/* Geklikte links naar zwart WERKT NIET */ 
-a:visited{
-	color: black;
+
+
+/* ALS SCHERM BREDER IS ANDERE STYLING */
+
+@media screen and (width>60em) {
+	video {
+		display: flex;
+		margin: 0.8em;
+		width: 70%;
+		max-height: 30em;
+		margin-left: 15%;
+		margin-bottom: 13%;
+		margin-top: 11%;
+	}
 }
+
+/* Bronnen
+
+  1. https://developer.mozilla.org/en-US/docs/Web/CSS/position
+  2. https://www.w3schools.com/tags/att_video_controls.asp
+  3. https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible
+  4. https://stackoverflow.com/questions/6805482/css3-transition-animation-on-load
+  5. https://css-tricks.com/almanac/properties/o/outline/
+  6. https://www.youtube.com/watch?v=3y_aF9z7BV4
+  7. https://zellwk.com/blog/style-hover-focus-active-states/
+  8. https://chat.openai.com
+  9. https://stackoverflow.com/questions/43060941/figure-slider-stacks
+  10. https://www.w3schools.com/howto/howto_css_zoom_hover.asp
+  11. https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden#
+*/
